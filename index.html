@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <title>
+           My Digital Media: Assignment 2
+        </title>
+
+        <style>
+            .row{
+                width:720px;
+                margin: 10px auto 10px auto ;
+            }
+            .image-container {
+                display: table-cell;
+                vertical-align: middle;
+                padding:20px;
+            }
+        </style>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/buzz/1.2.1/buzz.min.js"></script>
+    </head>
+
+    <body style="background-color:gold">
+
+        <div class="row">
+            <div class="image-container"><img id="Battery" src="img/EmptyBattery.PNG" width="200" height="200" onmouseover="this.src='img/EmptyBatteryGREY.PNG';" onmouseout="this.src='img/EmptyBattery.PNG';"/></div>
+            <div class="image-container"><img id="Cross" src="img/EmptyCross.PNG" width="200" height="200" onmouseover="this.src='img/EmptyCrossGREY.PNG';" onmouseout="this.src='img/EmptyCross.PNG';"/></div>
+            <div class="image-container"><img id="Error" src="img/EmptyError.PNG" width="200" height="200" onmouseover="this.src='img/EmptyErrorGREY.PNG';" onmouseout="this.src='img/EmptyError.PNG';"/></div>
+        </div>
+
+        <div>
+            <div class="image-container"><img id="Glass" src="img/EmptyGlass.PNG" width="200" height="200" onmouseover="this.src='img/EmptyGlassGrey.PNG';" onmouseout="this.src='img/EmptyGlass.PNG';"/></div>
+            <div class="image-container"><img id="Page" src="img/EmptyPage.PNG" width="200" height="200" onmouseover="this.src='img/EmptyPageGREY.PNG';" onmouseout="this.src='img/EmptyPage.PNG';"/></div>
+            <div class="image-container"><img id="Book" src="img/EmptyBook.PNG" width="200" height="200" onmouseover="this.src='img/EmptyBookGrey.PNG';" onmouseout="this.src='img/EmptyBook.PNG';"/></div>
+        </div>
+
+        <div>
+            <div class="image-container"><img id="Space" src="img/EmptySpace.PNG" width="200" height="200" onmouseover="this.src='img/EmptySpaceGrey.PNG';" onmouseout="this.src='img/EmptySpace.PNG';"/></div>
+            <div class="image-container"><img id="Tab" src="img/EmptyTab.PNG" width="200" height="200" onmouseover="this.src='img/EmptyTabGREY.PNG';" onmouseout="this.src='img/EmptyTab.PNG';"/></div>
+            <div class="image-container"><img id="Wallet" src="img/EmptyWallet.PNG" width="200" height="200" onmouseover="this.src='img/EmptyWalletGrey.PNG';" onmouseout="this.src='img/EmptyWallet.PNG';"/></div>
+        </div>
+
+        <!--
+
+        <h1>
+            This is the main heading!
+        </h1>
+
+        <h2>
+            This is a subheading!
+        </h2>
+
+        <p>
+            Here's a sentence
+        </p>
+
+        <p>
+            Here's another sentence... <br>that continues on the next line
+        </p>
+
+    -->
+
+    <!--
+
+        <img id="Battery" src="img/EmptyBattery.PNG" width="200" height="200" onmouseover="this.src='img/EmptyBatteryGREY.PNG';" onmouseout="this.src='img/EmptyBattery.PNG';">
+        <img id="Cross" src="img/EmptyCross.PNG" width="200" height="200" onmouseover="this.src='img/EmptyCrossGREY.PNG';" onmouseout="this.src='img/EmptyCross.PNG';">
+        <img id="Error" src="img/EmptyError.PNG" width="200" height="200" onmouseover="this.src='img/EmptyErrorGREY.PNG';" onmouseout="this.src='img/EmptyError.PNG';">
+        <img id="Glass" src="img/EmptyGlass.PNG" width="200" height="200" onmouseover="this.src='img/EmptyGlassGrey.PNG';" onmouseout="this.src='img/EmptyGlass.PNG';">
+        <img id="Page" src="img/EmptyPage.PNG" width="200" height="200" onmouseover="this.src='img/EmptyPageGREY.PNG';" onmouseout="this.src='img/EmptyPage.PNG';">
+        <img id="Book" src="img/EmptyBook.PNG" width="200" height="200" onmouseover="this.src='img/EmptyBookGrey.PNG';" onmouseout="this.src='img/EmptyBook.PNG';">
+        <img id="Space" src="img/EmptySpace.PNG" width="200" height="200" onmouseover="this.src='img/EmptySpaceGrey.PNG';" onmouseout="this.src='img/EmptySpace.PNG';">
+        <img id="Tab" src="img/EmptyTab.PNG" width="200" height="200" onmouseover="this.src='img/EmptyTabGREY.PNG';" onmouseout="this.src='img/EmptyTab.PNG';">
+        <img id="Wallet" src="img/EmptyWallet.PNG" width="200" height="200" onmouseover="this.src='img/EmptyWalletGrey.PNG';" onmouseout="this.src='img/EmptyWallet.PNG';">
+    -->
+
+        
+        <script>
+
+         var sound1 = new buzz.sound("sounds/NotificationSound.mp3") ;
+         var sound2 = new buzz.sound("sounds/CrossSound.mp3") ;
+         var sound3 = new buzz.sound("sounds/ErrorSound.mp3") ;
+         var sound4 = new buzz.sound("sounds/GlassSound.wav") ;
+         var sound5 = new buzz.sound("sounds/PageSound.wav") ;
+         var sound6 = new buzz.sound("sounds/BookSound.wav") ;
+         var sound7 = new buzz.sound("sounds/SpaceSound.mp3") ;
+         var sound8 = new buzz.sound("sounds/TabSound.wav") ;
+         var sound9 = new buzz.sound("sounds/WalletSound.mp3") ;
+         
+         window.onload = function() {
+            document.getElementById('Battery').addEventListener('click', function () {sound1.play();});
+            document.getElementById('Cross').addEventListener('click', function () {sound2.play();});
+            document.getElementById('Error').addEventListener('click', function () {sound3.play();});
+            document.getElementById('Glass').addEventListener('click', function () {sound4.play();});
+            document.getElementById('Page').addEventListener('click', function () {sound5.play();});
+            document.getElementById('Book').addEventListener('click', function () {sound6.play();});
+            document.getElementById('Space').addEventListener('click', function () {sound7.play();});
+            document.getElementById('Tab').addEventListener('click', function () {sound8.play();});
+            document.getElementById('Wallet').addEventListener('click', function () {sound9.play();});
+         }
+        </script>
+
+    </body>
+
+</html>
